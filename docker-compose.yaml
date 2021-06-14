@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  env_demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_URLS: "http://+"
+      "Settings:AgentName": "windows"
+      "Settings:BaseApiUrl": "http://server:36000"
+    ports:
+      - 15000:80
